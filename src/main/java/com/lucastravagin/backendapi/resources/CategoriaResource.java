@@ -10,20 +10,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lucastravagin.backendapi.domain.Categoria;
 
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping(value = "/categorias")
 public class CategoriaResource {
-	
-	@RequestMapping(method=RequestMethod.GET)
+
+	@RequestMapping(method = RequestMethod.GET)
 	public List<Categoria> listar() {
-		
+
 		Categoria cat1 = new Categoria(1, "Informática");
 		Categoria cat2 = new Categoria(2, "Escritório");
+		Categoria cat3 = new Categoria(3, "Higiene");
 		
 		List<Categoria> lista = new ArrayList<>();
 		lista.add(cat1);
 		lista.add(cat2);
-		
-		
+		lista.add(cat3);
+
 		return lista;
 	}
 }
